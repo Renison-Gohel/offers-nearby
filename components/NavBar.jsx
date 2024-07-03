@@ -6,27 +6,28 @@ import { FaHome, FaInbox, FaCompass, FaBell, FaBars } from 'react-icons/fa';
 import Image from "next/image";
 
 const NavBar = () => {
-    // const [header,setHeader] = useState(false);
+    const [header,setHeader] = useState(false);
 
-    // const scrollHeader = () => {
-    //     if(window.scrollY >= 20){
-    //         setHeader(true)
-    //         console.log("true");
-    //     }else{
-    //         console.log("false");
-    //         setHeader(false)
-    //     }
-    // }
+    const scrollHeader = () => {
+        if(window.scrollY >= 20){
+            // console.log("true");
+            setHeader(true)
+        }else{
+            // console.log("false");
+            setHeader(false)
+        }
+    }
 
-    // useEffect(() => {
-    //  window.addEventListener('scroll', scrollHeader) 
-    //     return () => {
-    //         window.addEventListener('scroll', scrollHeader)
-    //     }
-    // }, [])
+    useEffect(() => {
+     window.addEventListener('scroll', scrollHeader) 
+        return () => {
+            window.addEventListener('scroll', scrollHeader)
+        }
+    }, [])
     
     return (
-        // <div className={header ? "sticky top-0 w-[100%] blur z-10" : ""}>
+        // <div className={header ? "sticky top-0 w-[100%] z-10 bg-purple-300 bg" : ""}>
+        <div className={`${header ? 'sticky top-0 w-[100%] z-10 bg-purple-100 rounded-2xl':'rounded-2xl'} rounded-2xl`}>
         <header className="flex justify-between items-center p-4" >
             <Flex direction={"column"} gap='1' align={"start"} className="text-slate-400 font-medium">
                 <DropdownMenu.Root>
@@ -52,9 +53,10 @@ const NavBar = () => {
                 fallback="R"
                 size="4"
                 radius="full"
+                className='cursor-pointer'
             />
         </header>
-        // </div>
+        </div>
     )
 }
 

@@ -65,7 +65,7 @@ export default function Home() {
          <section className="mb-6">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-semibold">You might like</h2>
-            <Link href="all-offers" className="text-sm text-purple-600">See All</Link>
+            <Link href="all-offers" className="text-sm text-purple-600 underline underline-offset-4">See All</Link>
           </div>
 
           {/*<div className="flex space-x-4 overflow-x-scroll no-scrollbar">
@@ -121,7 +121,7 @@ export default function Home() {
         <section>
           <div className="flex justify-between items-center mb-4 mt-4">
             <h2 className="text-xl font-semibold">Upcoming events</h2>
-            <a href="#" className="text-sm text-purple-600">See All</a>
+            <a href="#" className="text-sm text-purple-600 underline underline-offset-4">See All</a>
           </div>
           <div className="bg-white rounded-lg overflow-hidden shadow-md mb-4">
             <img src="https://via.placeholder.com/150" alt="Event" className="w-full h-32 object-cover" />

@@ -2,19 +2,21 @@
 
 import React from 'react'
 import { FaHeart, FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
-import {Card} from '@radix-ui/themes';
+import { Card } from '@radix-ui/themes';
+import Link from 'next/link';
 
 const MyCard = () => {
-    const handleClick = (e) =>{
+    const handleClick = (e) => {
         e.preventDefault();
         console.log('clicked');
     }
     return (
-        
-            <Card variant='surface' className="bg-white mr-4 p-4 rounded-xl shadow-md w-80 mx-3">
-                <div className="mb-4">
-                    <img src="https://img4.nbstatic.in/tr:w-350/65e5ed8c10a1d5000c8e8cf3.jpg" alt="Event" className="w-full h-40 object-cover rounded-lg" />
-                </div>
+
+        <Card variant='surface' className="bg-white mr-4 p-4 rounded-xl shadow-md w-80 mx-3">
+            <div className="mb-4">
+                <img src="https://img4.nbstatic.in/tr:w-350/65e5ed8c10a1d5000c8e8cf3.jpg" alt="Event" className="w-full h-40 object-cover rounded-lg" />
+            </div>
+            <Link href="detail-page">
                 <div className="flex justify-between items-center mb-4">
                     <h3 className="text-lg font-semibold">Design Tour Sylhet 2023</h3>
                     <div className="p-1 rounded-full">
@@ -38,7 +40,8 @@ const MyCard = () => {
                     <div className="text-lg font-bold">$50.00 <span className="text-sm font-normal">/per person</span></div>
                     <button onClick={handleClick} className="bg-yellow-400 text-black px-4 py-2 rounded-full font-semibold">DIRECTION</button>
                 </div>
-            </Card>
+            </Link>
+        </Card>
     )
 }
 
